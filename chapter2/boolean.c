@@ -3,6 +3,8 @@
 enum boolean and(enum boolean, enum boolean);
 enum boolean or(enum boolean, enum boolean);
 
+void foo();
+
 
 // to practice with enum
 
@@ -20,6 +22,18 @@ enum boolean or(enum boolean a, enum boolean b) {
   else return NO;
 }
 
+enum boolean not(enum boolean a) {
+  if(a == YES)
+    return NO;
+  else
+    return YES;
+}
+
+void foo(int i) {
+  printf("foo %d\n", i);
+}
+    
+
 int main(void) {
   printf("YES and YES\n");
   printf("%d\n", and(YES, YES));
@@ -35,5 +49,12 @@ int main(void) {
   printf("NO or NO\n");
   printf("%d\n", or(NO, NO));
 
+  foo(5);
+
+  foo(8);
+
+  foo(1);
+  
   return 0;
 }
+
