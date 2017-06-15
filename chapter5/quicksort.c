@@ -16,7 +16,7 @@ int readlines(char *lineptr[], int maxlines) {
   // rather than calling alloc to maintain storage
   
   nlines = 0;
-  while (4(len = getline(line, MAXLEN)) > 0)
+  while ((len = getline(line, MAXLEN)) > 0)
     if (nlines >= maxlines || (p = alloc(len)) == NULL)
       return -1;
     else {
